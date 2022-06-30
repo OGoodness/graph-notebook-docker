@@ -68,7 +68,7 @@ RUN mkdir -p "${WORKING_DIR}" && \
     rm -rf /var/cache/yum && \
     rm -rf "${WORKING_DIR}/graph-notebook"
 
-
+ADD "Example-Remote-Server-Setup.ipynb" "${NOTEBOOK_DIR}/Example-Remote-Server-Setup.ipynb"
 ADD ./service.sh /usr/bin/service.sh
 
 ENTRYPOINT [ "bash","-c","service.sh" ]
